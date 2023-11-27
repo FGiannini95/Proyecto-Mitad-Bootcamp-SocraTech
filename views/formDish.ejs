@@ -1,0 +1,47 @@
+<%- include('head') %>
+    <!-- Link CSS Personal -->
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/main/main.css" />
+    <title>Form dish</title>
+    <%- include('navbar') %>
+    <!-- Main -->
+    <main class="main formDish">
+      <section class="container-fluid section5">
+        <div class="row text-center">
+          <h2>Add some other delicacies</h2>
+          <div class="col-12 form">
+            <form 
+            action="/dish/addDish/<%= restaurant_id %>" 
+            method="post"
+            enctype="multipart/form-data">
+              <input 
+              type="text"
+              name="dish_name"
+              placeholder="Dish's name"
+              >
+              <br>
+              <input 
+              type="text"
+              name="recipe"
+              placeholder="Context"
+              ><br>
+              <label
+              class="label-img"
+              for="file">Upload a picture</label>
+              <input
+              id="file"
+              type="file"
+              name="img"
+              hidden>
+              <!-- Artist conytoller metodo post -->
+              <h3><%= typeof message != 'undefined' ? message : null %></h3>
+    
+              <a href=""><button>Enter</button></a>
+              <button type="reset">Clean</button>
+              <a href="/restaurant/oneRestaurant/<%= restaurant_id %>"><button type="button">Go back</button></a>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <%- include('footer') %>

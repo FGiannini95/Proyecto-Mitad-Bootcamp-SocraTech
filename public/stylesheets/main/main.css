@@ -1,0 +1,84 @@
+.section1 h2, .section3 h2, .section4 h2 {
+  padding: 2.5rem 0 1.5rem 0;
+}
+.section1 .card, .section3 .card, .section4 .card {
+  transition: all 0.8s;
+  border: none;
+  background-color: black;
+}
+.section1 .card-body, .section3 .card-body, .section4 .card-body {
+  background-color: black;
+  color: white;
+  border: none;
+}
+.section1 .bold, .section3 .bold, .section4 .bold {
+  font-weight: bold;
+}
+
+.section1 > div {
+  flex-shrink: 1;
+}
+
+.section2 h2 {
+  padding: 2.5rem 0 1.5rem 0;
+}
+.section2 .card {
+  transition: all 0.8s;
+  border: none;
+  background-color: black;
+}
+.section2 .card-body {
+  background-color: black;
+  color: white;
+  border: none;
+}
+.section2 .bold {
+  font-weight: bold;
+}
+
+.section5 h2, .section6 h2, .section7 h2 {
+  padding: 2.5rem 0 1.5rem 0;
+}
+.section5 .label-img, .section6 .label-img, .section7 .label-img {
+  background-color: transparent;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background-color: white;
+  color: #A4A4A4;
+}
+
+.main {
+  position: relative;
+}
+.main .form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.shrink {
+  flex-shrink: initial;
+}
+
+@media (width >= 576px) {
+  .card:hover {
+    transform: scale(1.1);
+    border: black;
+  }
+  .editDish {
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./../../images/assets/pane.png);
+  }
+  .formDish {
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./../../images/assets/guindilla.png);
+  }
+  .editRestaurant {
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./../../images/assets/albahaca.png);
+  }
+}/*# sourceMappingURL=main.css.map */

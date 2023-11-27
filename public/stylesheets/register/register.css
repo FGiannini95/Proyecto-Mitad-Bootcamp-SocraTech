@@ -1,0 +1,48 @@
+main {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  min-height: 85vh;
+}
+
+video {
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  z-index: -1;
+}
+
+.label-img {
+  background-color: transparent;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background-color: white;
+  color: #A4A4A4;
+}
+
+@media (width <= 576px) {
+  .reg {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+}
+@media (width <= 1100px) {
+  .reg {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+}
+@media (width >= 1100px) {
+  .reg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+}/*# sourceMappingURL=register.css.map */

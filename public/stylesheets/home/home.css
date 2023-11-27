@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Satisfy&display=swap");
+main {
+  background-color: black;
+  height: 100vh;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+main video {
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+main .title .uno {
+  font-family: "Roboto", sans-serif;
+  font-family: "Satisfy", cursive;
+}
+
+@media (width <= 1100px) {
+  .title {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .title .dos {
+    font-size: 2rem;
+  }
+}
+@media (width >= 1100px) {
+  .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .title .dos {
+    font-size: 4rem;
+  }
+}/*# sourceMappingURL=home.css.map */

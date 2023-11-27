@@ -1,0 +1,53 @@
+<%- include('head') %>
+    <!-- Link CSS Personal -->
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/main/main.css" />
+    <title>Edit form</title>
+    <%- include('navbar') %>
+    <!-- Main -->
+    <main class="main editRestaurant">
+      <section class="container-fluid section7">
+        <div class="row text-center">  
+        <h2>Update the information</h2>
+        <div class="col-12 form">
+          <form
+          action="/restaurant/editRestaurant/<%= result[0].restaurant_id %>"
+          method="post"
+          enctype="multipart/form-data">
+            <input
+            type="text"
+            name="restaurant_name"
+            placeholder="Restaurant's name"
+            value="<%= result[0].restaurant_name %>"
+            ><br>
+            <input
+            type="text"
+            name="style"
+            placeholder="Type"
+            value="<%= result[0].style %>"
+            ><br>
+            <input
+            type="text"
+            name="description"
+            placeholder="Description"
+            value="<%= result[0].description %>"
+            ><br>
+            <label
+            class="label-img"
+            for="file">Upload a picture</label>
+            <input
+            id="file"
+            type="file"
+            name="img"
+            hidden>
+            <h3><%= typeof message != 'undefined' ? message : null %></h3>
+
+            <button>Enter</button>
+            <button type="reset">Reset</button>
+            <a href="/"><button>Go back</button></a>
+          </form>
+        </div>
+      </div>
+      </section>
+    </main>
+    <%- include('footer') %>

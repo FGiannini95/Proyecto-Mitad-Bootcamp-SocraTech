@@ -1,0 +1,48 @@
+<%- include('head') %>
+    <!-- Link CSS Personal -->
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/main/main.css" />
+    <title>Form Dish</title>
+    <%- include('navbar') %>
+    <!-- Main -->
+    <main class="main editDish">
+      <section class="container-xl section6">
+        <div class="row text-center"> 
+        <h2>Update the information</h2>
+        <div class="col-12 form">
+          <form 
+          action=""
+          method="post"
+          enctype="multipart/form-data">
+        <input
+        type="text"
+        name="dish_name"
+        placeholder="Dish's name"
+        value="<%= result[0].dish_name %>"
+        >
+        <br>
+        <input
+        type="text"
+        name="recipe"
+        placeholder="Context"
+        value="<%= result[0].recipe %>"
+        ><br>
+        <label
+        class="label-img"
+        for="file">Upload a picture</label>
+        <input
+        id="file"
+        type="file"
+        name="img"
+        hidden
+        /> <br>
+        <h3><%= typeof message != 'undefined' ? message : null %></h3>
+        <button>Enter</button>
+        <button type="reset">Reset</button>
+        <a href="/dish/oneDish/<%= result[0].dish_id %>"><button>Go back</button></a>
+      </form>
+        </div>
+      </div>
+      </section>
+    </main>
+    <%- include('footer') %>

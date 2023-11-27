@@ -1,0 +1,76 @@
+<%- include('head') %>
+<!-- Link CSS Personal -->
+<link rel="stylesheet" href="/stylesheets/style.css" />
+<link rel="stylesheet" href="/stylesheets/register/register.css" />
+<title>Register Form</title>
+<%- include('navbar') %>
+<!-- Main -->
+<main class="container-fluid gx-0">
+  <video autoplay loop muted>
+    <source src="/videos/carne.mp4" type="video/mp4" />
+  </video>
+  <section class="container-xl text-center register">
+    <div class="row text-center reg">
+      <h2>Add a new restaurant</h2>
+      <div class="col-12">
+        <form
+          action="/restaurant/register"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <input
+            type="text"
+            name="restaurant_name"
+            placeholder="Restaurant's name"
+          />
+          <br>
+          <input
+          type="text"
+          name="style"
+          placeholder="Type"
+          />
+          <br>
+          <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          />
+          <br>
+          <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          />
+          <br>
+          <input
+            type="password"
+            name="password2"
+            placeholder="Repit password"
+          />
+          <br>
+          <input
+          type="tel"
+          name="phone_number"
+          placeholder="Phone number"
+          />
+          <br>
+          <label
+          class="label-img"
+          for="file">Upload a picture</label>
+          <input
+          id="file"
+          type="file"
+          name="img"
+          hidden
+          />
+          <!-- Artist conytoller metodo post -->
+          <h3><%= typeof message != 'undefined' ? message : null %></h3>
+          <button>Enter</button>
+          <button type="reset">Clean</button>
+          <a href="/home"><button>Delete</button></a>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+<%- include('footer') %>

@@ -1,0 +1,48 @@
+<%- include('head') %>
+    <!-- Link CSS Personal -->
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/main/main.css" />
+    <title>One Restaurant</title>
+    <%- include('navbar') %>
+    <!-- Main -->
+    <main class="container-fluid">
+      <section class="container-xl section2">
+        <div class="row text-center">
+        <h2>Amazing choice!</h2>
+          <div class="d-flex justify-content-center gap-4 m-2">
+            <div class="card" style="width: 18rem;">
+              <img src="/images/restaurants/<%= result[0].restaurant_img %>" class="card-img-top" alt="...">
+              <div class="card-body d-flex flex-column text-center">
+                <p class="bold"><%= result[0].restaurant_name %></p>
+                <p><%= result[0].style %></p>
+                <p>To understand better: <%= result[0].description %></p>
+                <p><%= result[0].phone_number %></p>
+                <p><%= result[0].email %></p>
+                <a href="/restaurant/editRestaurant/<%= result[0].restaurant_id %>"><button >Update restaurant</button></a>
+                <a href="/restaurant/deleteRestaurant/<%= result[0].restaurant_id %>"><button>Delete restaurant</button></a>
+                <a href="/dish/addDish/<%= result[0].restaurant_id %>"><button>Add a new speciality</button></a>
+                <a href="/restaurant"><button>Go back</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="container-xl section3">
+        <div class="row text-center">
+        <h2>Top sellers:</h2>
+        <div class="d-flex flex-wrap justify-content-center gap-4 m-2">
+        <% result_dish.forEach((elem) =>{ %>
+            <div class="card" style="width: 18rem;">
+              <img src="/images/dishes/<%= elem.dish_img %>" class="card-img-top" alt="...">
+              <div class="card-body d-flex flex-column text-center">
+                <h5 class="card-title"><%= elem.dish_name %></h5>
+                <a href="/dish/oneDish/<%= elem.dish_id %>"><button>Know more</button></a>
+                <a href="/dish/deleteDish/<%= elem.dish_id %>/<%= elem.restaurant_id %>"><button>Delete</button></a>
+              </div>
+            </div>
+          <% }) %>
+        </div>
+        </div>
+      </section>
+    </main>
+    <%- include('footer') %>

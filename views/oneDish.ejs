@@ -1,0 +1,26 @@
+<%- include('head') %>
+    <!-- Link CSS Personal -->
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/main/main.css" />
+    <title>One dish</title>
+    <%- include('navbar') %>
+    <!-- Main -->
+    <main>
+      <section class="section4 container-xl">
+        <div class="row text-center"> 
+        <h2>It is ALL about the taste</h2>
+          <div class="d-flex justify-content-center gap-4 m-3">
+            <div class="card" style="width: 18rem;">
+              <img src="/images/dishes/<%= result[0].dish_img %>" class="card-img-top" alt="...">
+              <div class="card-body d-flex flex-column text-center">
+                <p>Dish's name: <%= result[0].dish_name %></p>
+                <p>Context: <%= result[0].recipe %></p>
+                <a href="/dish/editDish/<%= result[0].dish_id %>"><button>Update dish</button></a>
+                <a href="/restaurant/oneRestaurant/<%= result[0].restaurant_id %>"><button>Go Back to the restaurant</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <%- include('footer') %>

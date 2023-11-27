@@ -1,0 +1,108 @@
+
+//Section1 - restaurant 
+//Section3 - oneRestaurant(tope sellers)
+// Section4 - oneDish
+.section1, .section3, .section4{
+  h2 {
+    padding: 2.5rem  0 1.5rem 0;
+  }
+  .card{
+    transition: all 0.8s;
+    border: none;
+    background-color: black;
+  }
+
+  .card-body{
+    background-color: black;
+    color: white;
+    border: none;
+  }
+
+  .bold{
+    font-weight: bold;
+  }
+}
+
+.section1 > div{
+  flex-shrink: 1;
+}
+//Section2 - oneRestaurant
+
+.section2 {
+  h2{
+    padding: 2.5rem  0 1.5rem 0;
+  }
+  .card{
+    transition: all 0.8s;
+    border: none;
+    background-color: black;
+  }
+  
+  .card-body{
+    background-color: black;
+    color: white;
+    border: none;
+  }
+
+  .bold{
+    font-weight: bold;
+  }
+}
+
+//Section5 - formDish
+//Section6 - editFormDish
+//Section7 - 
+.section5, .section6, .section7{
+
+  h2 {
+    padding: 2.5rem  0 1.5rem 0;
+  }
+
+  .label-img{
+    background-color: transparent;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-color: white;
+    color:#A4A4A4;
+  }
+}
+
+.main {
+  position: relative;
+  
+  .form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.shrink {
+  flex-shrink: initial;
+}
+
+@media (width >= 576px) {
+  .card:hover{
+    transform: scale(1.1);
+    border: black;
+  }
+  .editDish{
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(./../../images/assets/pane.png);
+  }
+
+  .formDish{
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(./../../images/assets/guindilla.png);
+  }
+
+  .editRestaurant{
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(./../../images/assets/albahaca.png);
+  }
+}
+

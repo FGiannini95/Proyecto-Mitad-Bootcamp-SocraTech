@@ -1,0 +1,33 @@
+<%- include('head') %>
+<!-- Link CSS Personal -->
+<link rel="stylesheet" href="/stylesheets/style.css" />
+<link rel="stylesheet" href="/stylesheets/main/main.css" />
+<title>All restaurants</title>
+<%- include('navbar') %>
+<!-- Main -->
+<main class="container-fluid">
+  <section class="container-xl section1">
+    <div class="row text-center p-3">
+      <h2>Our experiences...</h2>
+      <div class="d-flex flex-wrap justify-content-center gap-4 m-3 shrink">
+        <% result.forEach( elem => { %>
+        <div class="card" style="width: 18rem">
+          <img
+            src="/images/restaurants/<%= elem.restaurant_img %>"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body d-flex flex-column text-center">
+            <p class="bold"><%= elem.restaurant_name %></p>
+            <p><%= elem.style %></p>
+            <a href="/restaurant/oneRestaurant/<%= elem.restaurant_id %>"
+              ><button>See more</button></a
+            >
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+</main>
+<%- include('footer') %>

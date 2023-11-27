@@ -1,0 +1,32 @@
+<%- include('head') %>
+<link rel="stylesheet" href="/stylesheets/style.css" />
+<link rel="stylesheet" href="/stylesheets/login/login.css" />
+<title>Login</title>
+<%- include('navbar') %>
+<!-- Main -->
+<main class="container-fluid gx-0">
+  <video autoplay loop muted>
+    <source src="/videos/edadame2.mp4" type="video/mp4" />
+  </video>
+  <section class="container-xl d-flex justify-content-center">
+    <div class="row text-center log">
+      <h2>Login</h2>
+      <div class="col-12">
+      <form action="/restaurant/login" method="post">
+        <input type="text" name="email" placeholder="Email" />
+        <br>
+        <input type="text" name="password" placeholder="Password" />
+
+        <h4 style="color: white">
+          <%= typeof message != 'undefined' ? message : null %>
+        </h4>
+
+        <a href=""><button>Enter</button></a>
+        <a href="/"><button type="button">Delete</button></a>
+      </form>
+    </div>
+    </div>
+  </section>
+</main>
+<%- include('footer') %>
+
